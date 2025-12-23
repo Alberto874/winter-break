@@ -13,7 +13,7 @@ body {
     height: 150px;
     border-radius: 10%;
     position: relative;
-    display: flex;
+    display: relative;
     text-align: center;
 }
 
@@ -22,4 +22,63 @@ body {
     top: -150px;
     left: 45%;
     color: #fff;
+}
+
+.lines {
+    position: relative;
+    top: 150px;
+    background-color: #ccc;
+}
+
+.lines::before {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    left: 18px;
+    background-color: #ddd;
+    position: absolute;
+    top: -220px;
+    transform: rotate(120deg);
+}
+
+.lines::after {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    left: 106px;
+    background-color: #ddd;
+    position: absolute;
+    top: -220px;
+    transform: rotate(240deg);
+}
+
+.banner:hover {
+    transform: rotate(-30deg);
+}
+
+.banner img {
+    width: 80px;
+    position: absolute;
+    right: -40px;
+    top: -50px;
+    transform: rotate(30deg);
+}
+.closed h1 {
+    background-color: #ccc;
+    width: 300px;
+    padding: 5px 0;
+    margin-bottom: 18px;
+  font-family: "Oooh Baby", cursive;
+}
+.closed p, .closed h2 {
+    background-color: #fff;
+    width: 300px;
+    font-size: 35px;
+    line-height: .02;
+    font-family: "Great Vibes", cursive;
+}
+.closed p {
+    font-size: 15px;
 }
